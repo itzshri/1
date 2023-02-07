@@ -1,0 +1,177 @@
+*{
+    margin: 0;padding: 0;
+    color:#000000;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+body{
+    overflow: hidden;
+
+}
+
+nav{
+    height: 6rem;
+    width: 100vw;
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    background-color: #ffffff;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.184);
+}
+
+/* Styling Logo*/
+
+.icon{
+    padding: 3vh 3vw;
+    text-align: left;
+    width: 200px;
+    float: left;
+    height: 100px;
+}
+
+.logo{
+    color: #000000;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 20px;
+    float: left;
+    text-align: cent;
+    font-weight: bold;
+    text-decoration: none;
+} 
+
+.logo span {
+    font-weight: bold;
+    color: #00A36C;
+
+}
+
+/* Styling Navigation Links*/
+
+.nav-links{
+    width: 80vw;
+    display: flex;
+    padding: 0 0.7vw;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: uppercase;
+    list-style: none;
+    font-weight: 600;
+}
+
+.nav-links li a{
+    margin: 0 0.7vw;
+    text-decoration: none;
+    transition: all ease-in-out 350ms;
+    padding: 10px;
+}
+
+.nav-links li a:hover{
+    color:#000;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.nav-links li{
+    position:relative;
+}
+
+.nav-links li a:hover::before{
+    width: 80%;
+}
+
+
+.open-nav-links, .close-nav-links{
+    position: absolute;
+    color: #000;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+.open-nav-links{
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.close-nav-links{
+    top: 20px;
+    right: 20px;
+
+}
+
+#check{
+    display: none;
+}
+
+
+/*Buttons Styling*/
+
+.Login-button{
+    color: #ffffff;
+    padding: 10px 45px;
+    margin-left: 5vw;
+    font-size:1rem;
+    cursor:pointer;
+    background-color: #00A36C    ;
+    border:1.5px solid #00A36C
+    ;
+    border-radius: 20px;
+}
+
+.Login-button:hover{
+    color:#00A36C;
+    text-emphasis-color: black;
+    background-color: transparent;    ;
+    border:1.5px solid #00A36C;
+    transition: all ease-in-out 350ms;
+}
+
+.Signup-button{
+    color: #ffffff;
+    padding: 10px 45px;
+    margin-left: 5vw;
+    font-size:1rem;
+    cursor:pointer;
+    background-color: #00A36C    ;
+    border:1.5px solid #00A36C
+    ;
+    border-radius: 20px;
+}
+
+.Signup-button:hover{
+    color:#00A36C;
+    text-emphasis-color: black;
+    background-color: transparent;    ;
+    border:1.5px solid #00A36C;
+    transition: all ease-in-out 350ms;
+}
+
+
+
+
+/*Responsive Adding Media Queries*/
+@media(max-width: 610px){
+    .nav-links{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: white;
+        box-shadow: 0 3px 20px rgba(0, 0, 0, 0.184);
+        transition: all 0.2s ease-in-out;
+    }
+
+    .nav-links li{
+        margin-top: 40px;}
+    .nav-links li a {padding: 10px;}
+    .open-nav-links, .close-nav-links{display: block;}
+    #check:checked ~ .nav-links {right: 0;}
+}
